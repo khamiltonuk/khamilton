@@ -1,0 +1,244 @@
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color:$base-colour; text-decoration: none;}
+a:hover { color:$base-colour; }
+
+.black-link {
+  color:$black; 
+}
+
+.highlight {
+  color: $base-colour;
+}
+/*******************
+Hidden elements
+**********************/
+.hidden {
+  display: none;
+}
+.hidden-text {
+  position: absolute;
+  text-indent: -999em;
+}
+.text-offset {
+  text-indent: 100%;
+  overflow:hidden;
+  white-space: nowrap;
+}
+/*******************
+Spacing
+**********************/
+.mbxs {
+  margin-bottom: 5px;
+}
+.mbs {
+  margin-bottom: 10px;
+}
+.mbm {
+  margin-bottom: 15px;
+}
+.mlm {
+  margin-bottom: 20px;
+}
+
+/*******************
+Centering
+**********************/
+.unknown-centering {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+
+}
+/*******************
+layout
+**********************/
+.sticky {
+  position: fixed !important;
+}
+.absolute{
+  position: absolute
+}
+.relative-parent {
+  position: relative;
+}
+.center {
+  @include transform(translate(-50%, -50%));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/*******************
+Clearfix
+**********************/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+/*******************
+Light box overlay
+**********************/
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.primary-overlay {
+  background: $offwhite-colour_95 none;
+}
+
+.secondary-overlay{
+  background: url(../images/overlay-transparent-background.png);
+  background: $sunrise-colour_95 none;
+}
+/*******************
+Menu
+**********************/
+#menu {
+  padding: 10px;
+  position: absolute;
+  top: 0px; left: 50%;
+  margin-left: -35px;
+  background: red;
+  width: 70px;
+  height: 70px;
+  .screen-reader{
+    position: absolute;
+    left: -999em;
+  }
+}
+.bar, .bar:after,
+.bar:before {
+  background:  #efeade;
+  width: 50px;
+  /* border-radius: 5px; */
+  height: 5px;
+  margin: 23px 0;
+  display: block;
+  position: relative; }
+
+.bar:after,
+.bar:before {
+  content: " ";
+  position: absolute;
+  margin: 0;
+  @include transition(all 0.4s ease)
+}
+
+.bar:after {
+  top: 21px; }
+
+.bar:before {
+  top: -21px; }
+
+
+.menu {
+  min-height: 100%;
+  background: $kham-base;
+
+  display: none;
+  .center-wrap {
+    text-align: center;
+  }
+  a {
+    width: 100px;
+    height: 20px;
+    padding: 40px 0; 
+    display: inline-block;
+    background: red;
+    margin: 10px 5px  ;
+    text-align: center;
+    -webkit-transition: all 0.2s;
+    color:  #efeade;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        background: #efeade;
+        color: black;
+        }
+    }
+}
+
+#menu.alternative .bar, #menu.alternative .bar:after,
+#menu.alternative .bar:before {
+  background-color: transparent; }
+
+#menu.alternative .bar:before {
+    @include transform(45deg);
+    top: -0px;
+    background:  #efeade;
+    display: block;
+}
+
+#menu.alternative .bar:after {
+    @include transform(-45deg);
+    top: 0px;
+    background:  #efeade;
+    display: block;
+}
+@media only screen and (max-width: 767px) {
+  .menu a {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: block;
+        padding: 10px 0;
+  }
+  .no-js {
+        #menu { display: none;}
+  }
+}
+/*---------------------------
+GO BACK TO TOP
+----------------------------*/
+
+#go-top {
+    position: fixed;
+    bottom: 9em;
+    right: -12em;
+    font-weight: bold;
+    text-decoration: none;
+    color:  #efeade;
+    z-index: 10;
+    background-color: red;
+    font-size: 12px;
+    padding: 1em;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s; /* Safari */
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    &.animate {
+        right: 2em;
+    }
+}
+@media only screen and (max-width: 767px) {
+  #go-top {
+        bottom: 0;
+        width: 100%;
+        right: 100%;
+        text-align: center;
+        &.animate {
+        right: 0;
+        }
+    }
+}

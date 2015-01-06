@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after{ 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+h1 { 
+  font-size: 0.75em;
+}
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+html { -webkit-font-smoothing: antialiased;}
+
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color:$base-highlight-colour; text-decoration: none;}
+a:hover { color:$base-highlight-colour; }
+
+/* bicubic resizing for non-native sized IMG:
+code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+img { max-width: 100%;}
+
+p,
+h1,
+h2,
+h3 {
+  letter-spacing: 1px;
+  color: $black;
+}
+
+@media only screen and (min-width: 320px) {
+  .center-wrap {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:7.068%;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+ 
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 910px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main{
+    max-width: 1320px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top:60px;
+  }
+}

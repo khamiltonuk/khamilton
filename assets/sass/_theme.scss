@@ -1,0 +1,18 @@
+/*******************
+THEME
+**********************/
+body {
+  font-family: 'aaarghnormal', verdana;
+  margin: 0;
+  background: $kham-base;
+}
+
+#full-screen {
+  padding-top: 80px;
+  min-height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0; left: 0;
+  background:  #efeade;
+  @include transition( all 0.2s ease) 
+}

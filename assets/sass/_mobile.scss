@@ -1,0 +1,19 @@
+@media only screen and (max-width: 767px) {
+    .center-wrap{
+        width: 100%;
+        h2,
+        h1 {
+            text-align: center
+        }
+        p,
+        h1,
+        h2 {
+            padding: 25px; 
+        }
+    }
+    .no-js {
+    }
+    #full-screen.show{
+        top: 165px;
+    }
+}

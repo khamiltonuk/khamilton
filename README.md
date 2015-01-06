@@ -1,4 +1,6 @@
-khamilton
-=========
+#Khamilton.co.uk
 
-new portfolio website
+Personal portfolio of Kristian Hamilton
+[@KhamiltonUk](https://twitter.com/khamiltonuk "Follow me on twitter")
+
+Todo html5 shiv
